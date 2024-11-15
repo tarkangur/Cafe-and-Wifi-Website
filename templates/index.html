@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe ve WiFi Sitesi</title>
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="display-4">Cafe ve WiFi Sitesine Hoş Geldiniz</h1>
+        <p class="lead">En iyi kahve ve WiFi noktalarını keşfedin!</p>
+        <a href="{{ url_for('all_cafes') }}" class="btn btn-primary mt-3">Kafeleri Gör</a>
+    </div>
+    {{ bootstrap.load_js() }}
+</body>
+</html>
