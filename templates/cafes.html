@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="back-home">
+        <a href="{{ url_for('home') }}" class="btn btn-primary">Ana Sayfaya Dön</a>
+    </div>
+
+    <h1 class="text-center">Our Cafes</h1>
+    <div class="add-cafe">
+        <a href="{{ url_for('add_cafe') }}" class="btn btn-primary">Add New Cafe</a>
+    </div>
+    <div class="cafes-list">
+        {% for cafe in cafes %}
+        <div class="cafe-card">
+            <img src="{{ cafe.img_url }}" alt="{{ cafe.name }} image" class="cafe-img">
+            <div class="cafe-info">
+                <h2>{{ cafe.name }}</h2>
+                <p><strong>Location:</strong> {{ cafe.location }}</p>
+                <p><strong>Seats:</strong> {{ cafe.seats }}</p>
+                <p><strong>Wifi:</strong> {{ 'Yes' if cafe.has_wifi else 'No' }}</p>
+                <p><strong>Sockets:</strong> {{ 'Yes' if cafe.has_sockets else 'No' }}</p>
+                <p><strong>Toilet:</strong> {{ 'Yes' if cafe.has_toilet else 'No' }}</p>
+                <p><strong>Price:</strong> {{ cafe.coffee_price }}</p>
+                <a href="{{ cafe.map_url }}" class="btn btn-secondary" target="_blank">View on Map</a>
+                <a href="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
