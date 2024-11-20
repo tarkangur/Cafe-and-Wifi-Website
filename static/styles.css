@@ -141,3 +141,100 @@ h1 {
     border-color: #8c4a0d;
     outline: none;
 }
+
+/* Kafe Ekleme Sayfası Genel Ayarları */
+.add-cafe-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff; /* Beyaz arka plan */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* Başlık Ayarları */
+.add-cafe-container h1 {
+    text-align: center;
+    color: #4b3832; /* Kahverengi tonları */
+    margin-bottom: 2rem;
+}
+
+/* Form Grup Ayarları */
+.add-cafe-container .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.add-cafe-container .form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #6f4e37; /* Hafif kahve */
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.add-cafe-container .form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #d3c4a3; /* Açık kahve */
+    font-size: 1rem;
+    color: #4b3832;
+}
+
+.add-cafe-container .form-input:focus {
+    border-color: #8c4a0d; /* Kahve tonlarında bir odak efekti */
+    outline: none;
+}
+
+/* SelectField (Dropdown) Ayarları */
+.add-cafe-container .form-select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #d3c4a3;
+    font-size: 1rem;
+    color: #4b3832;
+    background-color: #fdfcf8;
+}
+
+.add-cafe-container .form-select:focus {
+    border-color: #8c4a0d;
+    outline: none;
+}
+
+/* Submit Butonu */
+.add-cafe-container .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8c4a0d; /* Kahverengi */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-cafe-container .submit-btn:hover {
+    background-color: #b5651d; /* Daha açık kahve tonu */
+}
+
+/* Geri Dön Butonu */
+.add-cafe-container .back-home {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.add-cafe-container .back-home a {
+    text-decoration: none;
+    color: #4b3832;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.add-cafe-container .back-home a:hover {
+    text-decoration: underline;
+}
